@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ukabB1satSMEQy0WLCMwrEQs2Z+vIocY7HIO2AhOlyw=",
+  "Source": "ApiMongoDb",
+  "BasePath": "_content/ApiMongoDb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
