@@ -1,28 +1,32 @@
-﻿using MongoDB.Bson;
+﻿using ApiMongoDb.Domains;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using System.Text.Json.Serialization;
 
-namespace ApiMongoDb.Domains
+namespace ApiMongoDb.ViewModel
 {
-    public class Order
+    public class OrderViewModel
     {
-        [BsonId]
-        [BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
+       
         public string? Id { get; set; }
 
-        [BsonElement("date")]
         public DateTime Date { get; set; }
 
-        [BsonElement("status")]
         public string? Status { get; set; }
 
         // Referência aos produtos pedidos
         [BsonElement("productId")]
         public List<string>? ProductId { get; set; }
-        public List<Product> Products { get; set; }
+        [BsonIgnore]
+        [JsonIgnore]
+        public List<Product>? Products { get; set; }
+
 
         // Referência aos clientes
         [BsonElement("clientId")]
         public string? ClientId { get; set; }
+        [BsonIgnore]
+        [JsonIgnore]
         public Client? Client { get; set; }
     }
 }

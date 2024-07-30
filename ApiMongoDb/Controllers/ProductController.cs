@@ -52,7 +52,7 @@ namespace ApiMongoDb.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Product>> Post(Product product)
+        public async Task<ActionResult<Product>> Post(Product product) 
         {
             try
             {

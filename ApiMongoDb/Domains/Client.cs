@@ -9,6 +9,11 @@ namespace ApiMongoDb.Domains
         [BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
+        // Referência ao Id como uma chave estrangeira
+        [BsonElement("_userId")]
+        public string? UserId { get; set; }
+        public User? user { get; set; }
+
         [BsonElement("cpf")]
         public string? Cpf { get; set; }
 
@@ -18,9 +23,6 @@ namespace ApiMongoDb.Domains
         [BsonElement("adress")]
         public string? Adress { get; set; }
 
-        // Referência ao Autor como uma chave estrangeira
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string UserId { get; set; }
 
         public Dictionary<string, string> AdditionalAttributes { get; set; }
 
