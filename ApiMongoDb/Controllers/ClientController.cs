@@ -151,7 +151,6 @@ namespace ApiMongoDb.Controllers
                     Cpf = clientViewModel.Cpf, 
                     Phone = clientViewModel.Phone, 
                     Adress = clientViewModel.Adress
-                    // Outros campos...
                 };
 
                 // Adiciona o produto ao banco de dados.
